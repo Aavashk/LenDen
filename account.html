@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Hamburger menu icon (three lines) -->
+    <button class="hamburger" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar menu that slides out -->
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="menu-items">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy Products</a>
+            <a href="sell.html">Sell Products</a>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">Wishlist</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>My Account</h1>
+                <p>Manage your profile information</p>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section class="account-section">
+            <div class="account-container">
+                <!-- Account Information -->
+                <div class="account-info">
+                    <!-- Username -->
+                    <div class="info-item">
+                        <div class="info-header">
+                            <label>Username</label>
+                            <button class="btn-edit-small" data-field="username">Edit</button>
+                        </div>
+                        <div class="info-display" id="usernameDisplay">
+                            <span id="usernameValue">JohnDoe</span>
+                        </div>
+                        <div class="info-edit hidden" id="usernameEdit">
+                            <input type="text" id="usernameInput" class="edit-input">
+                            <div class="edit-actions">
+                                <button class="btn-save" data-field="username">Save</button>
+                                <button class="btn-cancel" data-field="username">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-item">
+                        <div class="info-header">
+                            <label>Email</label>
+                            <button class="btn-edit-small" data-field="email">Edit</button>
+                        </div>
+                        <div class="info-display" id="emailDisplay">
+                            <span id="emailValue">john@example.com</span>
+                        </div>
+                        <div class="info-edit hidden" id="emailEdit">
+                            <input type="email" id="emailInput" class="edit-input">
+                            <div class="edit-actions">
+                                <button class="btn-save" data-field="email">Save</button>
+                                <button class="btn-cancel" data-field="email">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-item">
+                        <div class="info-header">
+                            <label>Phone Number</label>
+                            <button class="btn-edit-small" data-field="phone">Edit</button>
+                        </div>
+                        <div class="info-display" id="phoneDisplay">
+                            <span id="phoneValue">+1 234 567 8900</span>
+                        </div>
+                        <div class="info-edit hidden" id="phoneEdit">
+                            <input type="tel" id="phoneInput" class="edit-input">
+                            <div class="edit-actions">
+                                <button class="btn-save" data-field="phone">Save</button>
+                                <button class="btn-cancel" data-field="phone">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="info-item">
+                        <div class="info-header">
+                            <label>Date of Birth</label>
+                            <button class="btn-edit-small" data-field="dob">Edit</button>
+                        </div>
+                        <div class="info-display" id="dobDisplay">
+                            <span id="dobValue">Not set</span>
+                        </div>
+                        <div class="info-edit hidden" id="dobEdit">
+                            <input type="date" id="dobInput" class="edit-input">
+                            <div class="edit-actions">
+                                <button class="btn-save" data-field="dob">Save</button>
+                                <button class="btn-cancel" data-field="dob">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="info-item">
+                        <div class="info-header">
+                            <label>Password</label>
+                            <button class="btn-edit-small" data-field="password">Change</button>
+                        </div>
+                        <div class="info-display" id="passwordDisplay">
+                            <span id="passwordValue">••••••••</span>
+                        </div>
+                        <div class="info-edit hidden" id="passwordEdit">
+                            <input type="password" id="passwordInput" class="edit-input" placeholder="New password">
+                            <div class="edit-actions">
+                                <button class="btn-save" data-field="password">Save</button>
+                                <button class="btn-cancel" data-field="password">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>ShopBot</h3>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

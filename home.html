@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Hamburger menu icon (three lines) -->
+    <button class="hamburger" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar menu that slides out -->
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="menu-items">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy Products</a>
+            <a href="sell.html">Sell Products</a>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">Wishlist</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to LenDen</h1>
+                <p>Your one-stop destination to buy and sell amazing products</p>
+                <div class="hero-buttons">
+                    <a href="buy.html" class="btn btn-primary">Start Shopping</a>
+                    <a href="sell.html" class="btn btn-secondary">Become a Seller</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop" alt="Wireless Headphones">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones</h3>
+                        <p>High-quality sound with noise cancellation and 30-hour battery life.</p>
+                        <div class="rating">⭐ 4.5</div>
+                        <div class="product-footer">
+                            <span class="price">$89.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=400&fit=crop" alt="Smart Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Watch</h3>
+                        <p>Track your fitness, get notifications, and stay connected on the go.</p>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="product-footer">
+                            <span class="price">$199.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=400&fit=crop" alt="Portable Charger">
+                    </div>
+                    <div class="product-info">
+                        <h3>Portable Charger</h3>
+                        <p>20,000mAh capacity to keep your devices powered all day long.</p>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="product-footer">
+                            <span class="price">$34.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-section">
+                <a href="buy.html" class="btn btn-primary view-all-btn">View All Products</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>ShopBot</h3>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

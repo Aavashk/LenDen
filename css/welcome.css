@@ -1,0 +1,212 @@
+/* Welcome Page */
+.welcome-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #DFE8F7 0%, #B2C5DA 50%, #12A29D 100%);
+  padding: 40px 20px;
+}
+
+.welcome-section {
+  width: 100%;
+  max-width: 900px;
+}
+
+.welcome-container {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Logo Section */
+.logo-section {
+  margin-bottom: 40px;
+}
+
+.site-logo {
+  font-size: 56px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-section h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-item {
+  padding: 25px 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: linear-gradient(135deg, #12A29D 0%, #46B19F 100%);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(18, 162, 157, 0.3);
+}
+
+.feature-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.welcome-btn {
+  min-width: 180px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.welcome-btn.btn-primary {
+  background: #46B19F;
+  color: white;
+  border: 2px solid #46B19F;
+}
+
+.welcome-btn.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(70, 177, 159, 0.4);
+}
+
+.welcome-btn.btn-secondary {
+  background: transparent;
+  color: #12A29D;
+  border: 2px solid #12A29D;
+}
+
+.welcome-btn.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(18, 162, 157, 0.2);
+}
+
+/* Guest Link */
+.guest-link {
+  margin-top: 30px;
+}
+
+.guest-link a {
+  color: #666;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.guest-link a:hover {
+  color: #333;
+  border-bottom-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 40px 30px;
+  }
+
+  .site-logo {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .info-section h2 {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .welcome-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-container {
+    padding: 30px 20px;
+  }
+
+  .site-logo {
+    font-size: 36px;
+  }
+
+  .info-section h2 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Products - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Hamburger menu icon (three lines) -->
+    <button class="hamburger" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar menu that slides out -->
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="menu-items">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy Products</a>
+            <a href="sell.html">Sell Products</a>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">Wishlist</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Browse All Products</h1>
+                <p>Discover thousands of amazing products at great prices</p>
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-box">
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop" alt="Wireless Headphones">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones Pro</h3>
+                        <p>High-quality sound with active noise cancellation, 30-hour battery life, and premium comfort design.</p>
+                        <div class="rating">⭐ 4.5 (240 reviews)</div>
+                        <div class="product-footer">
+                            <span class="price">$89.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=400&fit=crop" alt="Smart Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Watch Ultra</h3>
+                        <p>Advanced fitness tracking, heart rate monitor, water-resistant design, and 7-day battery life.</p>
+                        <div class="rating">⭐ 4.8 (580 reviews)</div>
+                        <div class="product-footer">
+                            <span class="price">$199.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500&h=400&fit=crop" alt="USB-C Cable">
+                    </div>
+                    <div class="product-info">
+                        <h3>USB-C Fast Charging Cable</h3>
+                        <p>Durable braided design, supports fast charging up to 100W, and compatible with all USB-C devices.</p>
+                        <div class="rating">⭐ 4.3 (120 reviews)</div>
+                        <div class="product-footer">
+                            <span class="price">$12.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=400&fit=crop" alt="Portable Charger">
+                    </div>
+                    <div class="product-info">
+                        <h3>Portable Charger 20000mAh</h3>
+                        <p>Massive 20,000mAh capacity with dual USB ports. Charge two devices simultaneously and keep going all day.</p>
+                        <div class="rating">⭐ 4.7 (450 reviews)</div>
+                        <div class="product-footer">
+                            <span class="price">$34.99</span>
+                            <button class="btn-add">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>ShopBot</h3>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

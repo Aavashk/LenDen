@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="welcome-main">
+        <section class="welcome-section">
+            <div class="welcome-container">
+                <div class="logo-section">
+                    <h1 class="site-logo">LenDen</h1>
+                    <p class="tagline">Your Marketplace for Everything</p>
+                </div>
+
+                <div class="info-section">
+                    <h2>Welcome to LenDen</h2>
+                    <p class="description">
+                        LenDen is your one-stop destination for buying and selling amazing products. 
+                        Join thousands of users who trust us for their shopping needs.
+                    </p>
+
+                    <div class="features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🛍️</span>
+                            <h3>Buy Products</h3>
+                            <p>Browse thousands of quality products at great prices</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💼</span>
+                            <h3>Sell Products</h3>
+                            <p>List your products and reach a wide audience</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔒</span>
+                            <h3>Secure & Safe</h3>
+                            <p>Your transactions and data are always protected</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <a href="auth.html" class="btn btn-primary welcome-btn">Login</a>
+                    <a href="auth.html" class="btn btn-secondary welcome-btn" id="signupBtn">Sign Up</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Redirect to signup tab when clicking Sign Up button
+        document.getElementById('signupBtn').addEventListener('click', (e) => {
+            e.preventDefault()
+            window.location.href = 'auth.html?tab=signup'
+        })
+    </script>
+</body>
+</html>
