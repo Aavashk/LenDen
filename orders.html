@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Hamburger menu icon (three lines) -->
+    <button class="hamburger" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar menu that slides out -->
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="menu-items">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy Products</a>
+            <a href="sell.html">Sell Products</a>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">Wishlist</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>My Listed Products</h1>
+                <p>Manage your product listings</p>
+            </div>
+        </section>
+
+        <!-- Orders Section -->
+        <section class="products">
+            <h2>Your Products</h2>
+            <div class="product-grid" id="userProductsGrid">
+                <!-- User products will be dynamically added here -->
+            </div>
+
+            <div class="empty-orders" id="emptyOrders">
+                <div class="empty-icon">📦</div>
+                <h2>No products listed yet</h2>
+                <p>Start selling by listing your first product</p>
+                <a href="sell.html" class="btn btn-primary">List a Product</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>ShopBot</h3>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

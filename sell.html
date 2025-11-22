@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Products - LenDen</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sell.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Hamburger menu icon (three lines) -->
+    <button class="hamburger" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar menu that slides out -->
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="menu-items">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy Products</a>
+            <a href="sell.html">Sell Products</a>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">My Orders</a>
+            <a href="cart.html">Wishlist</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sell Your Products</h1>
+                <p>List your products and reach thousands of buyers</p>
+            </div>
+        </section>
+
+        <!-- Sell Form Section -->
+        <section class="sell-form-section">
+            <div class="form-container">
+                <h2>Product Details</h2>
+                <form id="sellForm" class="sell-form">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" name="productName" required placeholder="Enter product name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Description</label>
+                        <textarea id="productDescription" name="productDescription" rows="5" required placeholder="Describe your product in detail"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice">Price ($)</label>
+                        <input type="number" id="productPrice" name="productPrice" step="0.01" required placeholder="0.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactInfo">Contact Information</label>
+                        <input type="text" id="contactInfo" name="contactInfo" required placeholder="Email or phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Product Image</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                            <label for="productImage" class="file-upload-btn">Choose Image</label>
+                            <div id="fileName" class="file-name"></div>
+                        </div>
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">List Product</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>ShopBot</h3>
+                <button class="chatbot-close" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/sell.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
