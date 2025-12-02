@@ -1,16 +1,16 @@
 // Account page functionality
 
 const userData = {
-  username: localStorage.getItem('username') || 'JohnDoe',
-  email: localStorage.getItem('email') || 'john@example.com',
-  phone: localStorage.getItem('phone') || '+1 234 567 8900',
+  username: localStorage.getItem('username') || '',
+  email: localStorage.getItem('email') || '',
+  phone: localStorage.getItem('phone') || '',
   dob: localStorage.getItem('dob') || ''
 }
 
-// Display user data
-document.getElementById('usernameValue').textContent = userData.username
-document.getElementById('emailValue').textContent = userData.email
-document.getElementById('phoneValue').textContent = userData.phone
+// Display user data with placeholders if not set
+document.getElementById('usernameValue').textContent = userData.username || 'Not set'
+document.getElementById('emailValue').textContent = userData.email || 'Not set'
+document.getElementById('phoneValue').textContent = userData.phone || 'Not set'
 document.getElementById('dobValue').textContent = userData.dob || 'Not set'
 
 // Edit buttons
@@ -67,3 +67,4 @@ document.querySelectorAll('.btn-cancel').forEach(btn => {
     document.getElementById(`${field}Edit`).classList.add('hidden')
   })
 })
+
