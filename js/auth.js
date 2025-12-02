@@ -30,6 +30,10 @@ if (loginFormElement) {
   loginFormElement.addEventListener("submit", (e) => {
     e.preventDefault()
     const email = document.getElementById("loginEmail").value
+    
+    // Save login email to localStorage
+    localStorage.setItem('email', email)
+    
     showToast(`Welcome back, ${email}!`, 'success', 'Login Successful')
     setTimeout(() => {
       window.location.href = "home.html"
@@ -66,3 +70,4 @@ const tab = urlParams.get('tab')
 if (tab === 'signup' && signupTab) {
   signupTab.click()
 }
+
