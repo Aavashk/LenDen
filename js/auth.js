@@ -24,42 +24,21 @@ if (loginTab && signupTab) {
 
 
 
-// Handle login
+// Handle login - buttons are now useless (do nothing)
 const loginFormElement = document.querySelector("#loginForm form")
 if (loginFormElement) {
   loginFormElement.addEventListener("submit", (e) => {
     e.preventDefault()
-    const email = document.getElementById("loginEmail").value
-    
-    // Save login email to localStorage
-    localStorage.setItem('email', email)
-    
-    showToast(`Welcome back, ${email}!`, 'success', 'Login Successful')
-    setTimeout(() => {
-      window.location.href = "home.html"
-    }, 1000)
+    // Button does nothing
   })
 }
 
-// Handle signup
+// Handle signup - buttons are now useless (do nothing)
 const signupFormElement = document.querySelector("#signupForm form")
 if (signupFormElement) {
   signupFormElement.addEventListener("submit", (e) => {
     e.preventDefault()
-    const username = document.getElementById("signupUsername").value
-    const email = document.getElementById("signupEmail").value
-    const phone = document.getElementById("signupPhone").value
-    const dob = document.getElementById("signupDOB").value
-    
-    localStorage.setItem('username', username)
-    localStorage.setItem('email', email)
-    localStorage.setItem('phone', phone)
-    localStorage.setItem('dob', dob)
-    
-    showToast(`Welcome to LenDen, ${username}!`, 'success', 'Account Created')
-    setTimeout(() => {
-      window.location.href = "home.html"
-    }, 1000)
+    // Button does nothing
   })
 }
 
