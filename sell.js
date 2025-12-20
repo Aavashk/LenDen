@@ -41,7 +41,7 @@ if (sellForm) {
           id: Date.now(),
           name: productName,
           description: productDescription,
-          price: `$${parseFloat(productPrice).toFixed(2)}`,
+          price: `Rs.${parseFloat(productPrice).toFixed(2)}`,
           contact: contactInfo,
           image: event.target.result,
           rating: "⭐ New",
