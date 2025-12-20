@@ -1,0 +1,30 @@
+/* Search Box for Buy Page */
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #B2C5DA;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: white;
+  margin-top: 20px;
+}
+
+.search-box:focus {
+  border-color: #46B19F;
+  box-shadow: 0 4px 12px rgba(70, 177, 159, 0.2);
+}
+
+.search-box::placeholder {
+  color: #999;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0 2px;
+}

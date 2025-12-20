@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell Products - LenDen</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/sell.css">
-    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="sell.css">
+    <link rel="icon" href="Lenden_logo.png">
+
 </head>
 <body>
     <!-- Hamburger menu icon (three lines) -->
@@ -41,6 +42,7 @@
                 <p>List your products and reach thousands of buyers</p>
             </div>
         </section>
+        
 
         <!-- Sell Form Section -->
         <section class="sell-form-section">
@@ -58,7 +60,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="productPrice">Price ($)</label>
+                        <label for="productPrice">Price (Rs.)</label>
                         <input type="number" id="productPrice" name="productPrice" step="0.01" required placeholder="0.00">
                     </div>
 
@@ -86,24 +88,10 @@
     <!-- Toast Container -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- Chatbot -->
-    <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle">💬</button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <h3>ShopBot</h3>
-                <button class="chatbot-close" id="chatbotClose">&times;</button>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages"></div>
-            <div class="chatbot-input-area">
-                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
-                <button class="chatbot-send" id="chatbotSend">➤</button>
-            </div>
-        </div>
-    </div>
 
-    <script src="js/common.js"></script>
-    <script src="js/sell.js"></script>
-    <script src="js/chatbot.js"></script>
+
+    <script src="common.js"></script>
+    <script src="sell.js"></script>
+
 </body>
 </html>
