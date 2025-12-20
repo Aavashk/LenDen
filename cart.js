@@ -46,17 +46,16 @@ function loadCart() {
 
 function updateTotals(cart) {
   const subtotal = cart.reduce((sum, item) => {
-    // Ensure price is a number
-    const price = Number(item.price) || 0;
+    // Extract numeric value from price string (remove Rs. and spaces, keep commas and dots)
+    const priceStr = item.price.toString().replace(/Rs\.?\s*/g, '').replace(/,/g, '');
+    const price = parseFloat(priceStr) || 0;
     return sum + price;
   }, 0);
 
   const shipping = 150; // Rs.150 fixed shipping
-  const tax = subtotal * 0.1;
-  const total = subtotal + shipping + tax;
+  const total = subtotal + shipping;
 
   document.getElementById('subtotal').textContent = `Rs.${subtotal.toFixed(2)}`;
-  document.getElementById('tax').textContent = `Rs.${tax.toFixed(2)}`;
   document.getElementById('total').textContent = `Rs.${total.toFixed(2)}`;
 }
 
@@ -85,15 +84,14 @@ if (checkoutBtn) {
     }
 
     const subtotal = cart.reduce((sum, item) => {
-      const price = Number(item.price) || 0;
+      // Extract numeric value from price string (remove Rs. and spaces, keep commas and dots)
+      const priceStr = item.price.toString().replace(/Rs\.?\s*/g, '').replace(/,/g, '');
+      const price = parseFloat(priceStr) || 0;
       return sum + price;
     }, 0);
 
     const shipping = 150;
-    const tax = subtotal * 0.1;
-    const total = subtotal + shipping + tax;
-
-    
+    const total = subtotal + shipping;
 
     // Clear cart after checkout
     localStorage.setItem('cart', '[]');
